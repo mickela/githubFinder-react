@@ -1,22 +1,15 @@
-.App {
+.user-card{
+  width: 20rem;
+  height: 12rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.user-avatar{
+  border-radius: 5.75rem;
+  width: 80px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-}
+/* #282c34 */
+/* #09d3ac */

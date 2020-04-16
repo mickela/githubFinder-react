@@ -20,7 +20,7 @@ export class Search extends Component {
                         <div className="p-5 mt-3">
                             <form onSubmit={(e)=> value.search(username, e)}>
                                 <div className="form-group">
-                                    <input type="text" className="form-control" name="username" value={username} onChange={this.change} placeholder="Search Users..." />
+                                    <input type="text" className="form-control" name="username" value={username} onChange={this.change} placeholder="Search Users..." required/>
                                 </div>
                                 <div className="form-group">
                                     <button className="btn btn-lg btn-block btn-dark" type="submit">Search</button>
