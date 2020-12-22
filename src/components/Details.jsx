@@ -39,8 +39,8 @@ class Details extends Component {
                     <div className="card p-5 shadow-sm">
                         <div className="row">
                             <div className="col-md-5">
-                                <img src={avatar_url} className="w-100" alt="avatar"/>
-                                <button className="btn btn-danger btn-lg btn-block mb-3 btn-disabled">{name}</button>
+                                <img src={avatar_url} className="w-100 img-thumbnail" alt="avatar"/>
+                                <a href={html_url} target="_blank" className="btn btn-danger btn-lg btn-block mb-3">{name || this.props.match.params.username}</a>
                             </div>
                             <div className="col-md-7">
                                 <span className="badge badge-secondary">followers {followers} </span> {'  '}
@@ -56,16 +56,20 @@ class Details extends Component {
                                     <li className="list-group-item">Blog / website: {blog === '' ? 'N/A' : blog} </li>
                                     <li className="list-group-item">Hireable: {hireable ? 'True' : 'False'} </li>
                                     <li className="list-group-item">location: {location === null ? 'N/A' : location} </li>
-                                    <li className="list-group-item"> <a href={html_url}>visit profile</a> </li>
+                                    <li className="list-group-item"> <a href={html_url}>Visit Profile</a> </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
     
                     <h3 className="mt-3">Repositories</h3> <hr/>
-                    {this.state.repos.map(({ id, html_url, name, license, language, description, forks }) =>(
-                        <Repo key={id} html_url={html_url} name={name} user={this.props.match.params.username} license={license} language={language} description={description} forks={forks} />
-                    ))}
+                    {this.state.repos.length > 0 ? 
+                        this.state.repos.map(({ id, html_url, name, license, language, description, forks }) =>(
+                            <Repo key={id} html_url={html_url} name={name} user={this.props.match.params.username} license={license} language={language} description={description} forks={forks} />
+                        ))
+                        :
+                        <h1 className="text-center py-5">No Public Repositories</h1>
+                    }
                 </div>
             )
 

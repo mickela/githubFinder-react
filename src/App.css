@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+
+*{
+  font-family: 'Jost', sans-serif;
+}
+html, body{
+  scroll-behavior: smooth;
+  scrollbar-color: #f77683 #fff;
+}
 .user-card{
   width: 20rem;
   height: 12rem;
@@ -9,6 +18,9 @@
   border-radius: 5.75rem;
   width: 80px;
   text-align: center;
+}
+.loader{
+  width: 300px;
 }
 
 /* #282c34 */
