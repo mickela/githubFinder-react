@@ -40,7 +40,7 @@ class Details extends Component {
                         <div className="row">
                             <div className="col-md-5">
                                 <img src={avatar_url} className="w-100 img-thumbnail" alt="avatar"/>
-                                <a href={html_url} target="_blank" className="btn btn-danger btn-lg btn-block mb-3">{name || this.props.match.params.username}</a>
+                                <a href={html_url} target="_blank" rel="noopener noreferrer" className="btn btn-danger btn-lg btn-block mb-3">{name || this.props.match.params.username}</a>
                             </div>
                             <div className="col-md-7">
                                 <span className="badge badge-secondary">followers {followers} </span> {'  '}
